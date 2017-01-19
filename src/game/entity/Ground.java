@@ -12,7 +12,7 @@ import java.awt.Rectangle;
 
 public class Ground implements Drawable, GameEntity {
 	protected static DrawableImage image = null;
-	int x, y;
+	private int x, y;
 	public static final int RENDERING_SIZE = 16;
 
 	public Ground(Canvas defaultCanvas, int xx, int yy) {

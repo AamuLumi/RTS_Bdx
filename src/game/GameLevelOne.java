@@ -5,6 +5,7 @@ import gameframework.core.CanvasDefaultImpl;
 import gameframework.core.Game;
 import gameframework.core.GameLevelDefaultImpl;
 import gameframework.core.GameMovableDriverDefaultImpl;
+import gameframework.core.GameUniverse;
 import gameframework.core.GameUniverseDefaultImpl;
 import gameframework.core.GameUniverseViewPortDefaultImpl;
 import gameframework.moves_rules.*;
@@ -14,7 +15,9 @@ import java.awt.Point;
 
 import game.entity.Ground;
 import game.entity.Soldier;
+import game.framework.extended.BuildStrategyMouse;
 import game.framework.extended.MoveStrategyMouse;
+import game.framework.extended.UniqueGameUniverse;
 import game.rule.GameOverlapRules;
 import pacman.entity.Ghost;
 import pacman.entity.Jail;
@@ -74,8 +77,11 @@ public class GameLevelOne extends GameLevelDefaultImpl {
             { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
             { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } };
 
-    public static final int SPRITE_SIZE = 16;
-    public static final int NUMBER_OF_GHOSTS = 5;
+    
+    
+    protected void addNewSoldier(GameUniverse universe, int x, int y) {
+    	
+    }
 
     @Override
     protected void init() {
@@ -86,38 +92,28 @@ public class GameLevelOne extends GameLevelDefaultImpl {
 
         GameOverlapRules overlapRules = new GameOverlapRules(life[0], score[0], endOfGame);
         overlapProcessor.setOverlapRules(overlapRules);
+        
+        UniqueGameUniverse.init(moveBlockerChecker, overlapProcessor);
 
-        universe = new GameUniverseDefaultImpl(moveBlockerChecker, overlapProcessor);
+        universe = UniqueGameUniverse.getInstance();
+        
+        UniqueGameUniverse.getInstance().setupCanvas(canvas);
 
         gameBoard = new GameUniverseViewPortDefaultImpl(canvas, universe);
         ((CanvasDefaultImpl) canvas).setDrawingGameBoard(gameBoard);
 
         // Filling up the universe with basic non movable entities and inclusion in the universe
-        for (int i = 0; i < 31; ++i) {
-            for (int j = 0; j < 28; ++j) {
+        for (int i = 0; i < tab.length; ++i) {
+            for (int j = 0; j < tab[i].length; ++j) {
                 if (tab[i][j] == 1) {
-                    universe.addGameEntity(new Ground(canvas, j * SPRITE_SIZE, i * SPRITE_SIZE));
+                    universe.addGameEntity(new Ground(canvas, j * Main.SPRITE_SIZE, i * Main.SPRITE_SIZE));
                 }
             }
         }
-
-        Factory soldierFactory = new Factory(canvas, 5*SPRITE_SIZE, 5*SPRITE_SIZE);
-
-        Soldier currentSoldier = new Soldier(canvas);
-        GameMovableDriverDefaultImpl soldierDriver = new GameMovableDriverDefaultImpl();
-
-        MoveStrategyMouse mouseStr = new MoveStrategyMouse(currentSoldier);
-        soldierDriver.setStrategy(mouseStr);
-        canvas.addMouseListener(mouseStr);
-
-        MoveStrategyMouse buildingStr = new MoveStrategyMouse(soldierFactory);
-        canvas.addMouseListener(buildingStr);
-
-        currentSoldier.setDriver(soldierDriver);
-        currentSoldier.setPosition(new Point(14 * SPRITE_SIZE, 17 * SPRITE_SIZE));
-        universe.addGameEntity(currentSoldier);
-        universe.addGameEntity(soldierFactory);
-
+        
+        UniqueGameUniverse.getInstance().addSoldier(14, 17);
+        UniqueGameUniverse.getInstance().addFactory(5, 5);
+        UniqueGameUniverse.getInstance().addSoldier(14, 16);
     }
 
     public GameLevelOne(Game g) {

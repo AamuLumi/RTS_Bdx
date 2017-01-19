@@ -3,6 +3,7 @@ package game.entity;
 import gameframework.core.Drawable;
 import gameframework.core.DrawableImage;
 import gameframework.core.GameEntity;
+import gameframework.core.Overlappable;
 import gameframework.moves_rules.MoveBlocker;
 
 import java.awt.Canvas;
@@ -10,15 +11,32 @@ import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.Rectangle;
 
-public class Factory implements Drawable, GameEntity, Building {
+import game.Main;
+import game.framework.extended.UniqueGameUniverse;
+
+public class Factory implements Drawable, GameEntity, Building, MoveBlocker {
     protected static DrawableImage image = null;
-    int x, y;
+    private int x, y;
     public static final int RENDERING_SIZE = 16;
+    public static final int BUILD_TIME = 2000;
+    private Runnable builder;
+    private Thread builderThread;
 
     public Factory(Canvas defaultCanvas, int xx, int yy) {
         image = new DrawableImage("images/factory.gif", defaultCanvas);
         x = xx;
         y = yy;
+        
+        builder = () -> {
+        	try {
+				Thread.sleep(BUILD_TIME);
+				UniqueGameUniverse.getInstance().addSoldier(x/Main.SPRITE_SIZE +1, y/Main.SPRITE_SIZE);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+        };   
+        
+        builderThread = new Thread(builder);
     }
 
     public void draw(Graphics g) {
@@ -36,6 +54,11 @@ public class Factory implements Drawable, GameEntity, Building {
 
     @Override
     public void doAction() {
-        System.out.println("Building action");
+        System.out.println("Creating soldier");
+        
+        if (!builderThread.isAlive()){
+        	builderThread = new Thread(builder);
+        	builderThread.start();
+        }
     }
 }

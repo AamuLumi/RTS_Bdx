@@ -6,6 +6,7 @@ import gameframework.core.GameDefaultImpl;
 import gameframework.core.GameLevel;
 
 public class Main {
+	public static final int SPRITE_SIZE = 16;
 
 	public static void main(String[] args) {
 		GameDefaultImpl g = new GameDefaultImpl();

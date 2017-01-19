@@ -7,4 +7,6 @@ import gameframework.core.Overlappable;
  */
 public interface Building extends Overlappable{
     public void doAction();
+    public boolean isSelected();
+    public void setSelectOption(boolean isSelected);
 }

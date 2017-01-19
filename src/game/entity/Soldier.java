@@ -13,7 +13,7 @@ import java.awt.Point;
 import java.awt.Rectangle;
 
 public class Soldier extends GameMovable implements Drawable, GameEntity,
-        Overlappable {
+    Overlappable {
     protected final SpriteManager spriteManager;
     public static final int RENDERING_SIZE = 16;
     protected boolean movable = true;
@@ -22,13 +22,8 @@ public class Soldier extends GameMovable implements Drawable, GameEntity,
 
     public Soldier(Canvas defaultCanvas) {
         spriteManager = new SpriteManagerDefaultImpl("images/soldier.gif",
-                defaultCanvas, RENDERING_SIZE, 4);
-        spriteManager.setTypes(
-                "idle",
-                "right",
-                "down",
-                "up",
-                "left");
+            defaultCanvas, RENDERING_SIZE, 4);
+        spriteManager.setTypes("idle", "right", "down", "up", "left");
     }
 
     public void draw(Graphics g) {

@@ -52,13 +52,13 @@ public class MoveStrategyMouse extends MouseAdapter implements MoveStrategy {
 
 		if (e.getX() > unitPosition.getX() + boundingBox.getWidth()) {
 			x = 1;
-		} else if (e.getX() < unitPosition.getX() - boundingBox.getWidth()) {
+		} else if (e.getX() < unitPosition.getX()) {
 			x = -1;
 		}
 
 		if (e.getY() > unitPosition.getY() + boundingBox.getHeight()) {
 			y = 1;
-		} else if (e.getY() < unitPosition.getY() - boundingBox.getHeight()) {
+		} else if (e.getY() < unitPosition.getY()) {
 			y = -1;
 		}
 

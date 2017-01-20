@@ -1,19 +1,15 @@
 package game.entity;
 
+import game.Main;
+import game.framework.extended.UniqueGameUniverse;
 import gameframework.core.Drawable;
 import gameframework.core.DrawableImage;
 import gameframework.core.GameEntity;
 import gameframework.moves_rules.MoveBlocker;
 
-import java.awt.Canvas;
-import java.awt.Graphics;
-import java.awt.Point;
-import java.awt.Rectangle;
+import java.awt.*;
 
-import game.Main;
-import game.framework.extended.UniqueGameUniverse;
-
-public class Factory implements Drawable, GameEntity, Building, MoveBlocker {
+public class Garage implements Drawable, GameEntity, Building, MoveBlocker {
     protected static DrawableImage image = null;
     protected static DrawableImage imageSelected = null;
     private int x, y;
@@ -23,16 +19,16 @@ public class Factory implements Drawable, GameEntity, Building, MoveBlocker {
     private Thread builderThread;
     private boolean isSelected = false;
 
-    public Factory(Canvas defaultCanvas, int xx, int yy) {
-        image = new DrawableImage("images/factory.gif", defaultCanvas);
-        imageSelected = new DrawableImage("images/factory_selected.gif", defaultCanvas);
+    public Garage(Canvas defaultCanvas, int xx, int yy) {
+        image = new DrawableImage("images/airport.gif", defaultCanvas);
+        imageSelected = new DrawableImage("images/airport_selected.gif", defaultCanvas);
         x = xx;
         y = yy;
 
         builder = () -> {
             try {
                 Thread.sleep(BUILD_TIME);
-                UniqueGameUniverse.getInstance().addSoldier(x / Main.SPRITE_SIZE + 1, y / Main.SPRITE_SIZE);
+                UniqueGameUniverse.getInstance().addVehicle(x / Main.SPRITE_SIZE + 1, y / Main.SPRITE_SIZE);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -61,7 +57,7 @@ public class Factory implements Drawable, GameEntity, Building, MoveBlocker {
 
     @Override
     public void doAction() {
-        System.out.println("Creating soldier");
+        System.out.println("Creating vehicle");
         if (!builderThread.isAlive()) {
             builderThread = new Thread(builder);
             builderThread.start();

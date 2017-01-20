@@ -4,7 +4,8 @@ import java.awt.Canvas;
 import java.awt.Point;
 
 import game.Main;
-import game.entity.Factory;
+import game.entity.Barrack;
+import game.entity.Garage;
 import game.entity.Soldier;
 import game.entity.Vehicle;
 import gameframework.core.GameMovableDriverDefaultImpl;
@@ -61,12 +62,21 @@ public class UniqueGameUniverse extends GameUniverseDefaultImpl {
         this.addGameEntity(currentVehicle);
     }
 
-    public void addFactory(int x, int y) {
-        Factory soldierFactory = new Factory(canvas, x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE);
-        BuildStrategyMouse buildingStr = new BuildStrategyMouse(soldierFactory);
+    public void addBarrack(int x, int y) {
+        Barrack soldierBarrack = new Barrack(canvas, x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE);
+        BuildStrategyMouse buildingStr = new BuildStrategyMouse(soldierBarrack);
 
         canvas.addMouseListener(buildingStr);
 
-        this.addGameEntity(soldierFactory);
+        this.addGameEntity(soldierBarrack);
+    }
+
+    public void addGarage(int x, int y) {
+        Garage vehicleGarage = new Garage(canvas, x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE);
+        BuildStrategyMouse buildingStr = new BuildStrategyMouse(vehicleGarage);
+
+        canvas.addMouseListener(buildingStr);
+
+        this.addGameEntity(vehicleGarage);
     }
 }

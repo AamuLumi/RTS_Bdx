@@ -95,6 +95,7 @@ public class GameLevelOne extends GameLevelDefaultImpl {
         UniqueGameUniverse.getInstance().addSoldier(14, 17);
         UniqueGameUniverse.getInstance().addFactory(5, 5);
         UniqueGameUniverse.getInstance().addSoldier(14, 16);
+        UniqueGameUniverse.getInstance().addVehicle(10, 10);
     }
 
     public GameLevelOne(Game g) {

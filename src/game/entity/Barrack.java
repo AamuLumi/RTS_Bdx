@@ -11,10 +11,10 @@ import java.awt.Point;
 import java.awt.Rectangle;
 
 import game.Main;
-import game.framework.extended.UniqueGameUniverse;
+import game.framework.extended.UnitFactory;
 
 public class Barrack implements Drawable, GameEntity, Building, MoveBlocker {
-    protected static DrawableImage image = null;
+    protected DrawableImage image = null;
     protected static DrawableImage imageSelected = null;
     private int x, y;
     public static final int RENDERING_SIZE = 16;
@@ -23,8 +23,8 @@ public class Barrack implements Drawable, GameEntity, Building, MoveBlocker {
     private Thread builderThread;
     private boolean isSelected = false;
 
-    public Barrack(Canvas defaultCanvas, int xx, int yy) {
-        image = new DrawableImage("images/factory.gif", defaultCanvas);
+    public Barrack(Canvas defaultCanvas, int xx, int yy, UnitFactory f, String imgPath) {
+        image = new DrawableImage(imgPath, defaultCanvas);
         imageSelected = new DrawableImage("images/factory_selected.gif", defaultCanvas);
         x = xx;
         y = yy;
@@ -32,7 +32,7 @@ public class Barrack implements Drawable, GameEntity, Building, MoveBlocker {
         builder = () -> {
             try {
                 Thread.sleep(BUILD_TIME);
-                UniqueGameUniverse.getInstance().addSoldier(x / Main.SPRITE_SIZE + 1, y / Main.SPRITE_SIZE);
+                f.addSoldier(x / Main.SPRITE_SIZE + 1, y / Main.SPRITE_SIZE);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -1,7 +1,11 @@
 package game;
 
 import game.entity.Ground;
+import game.framework.extended.AIUnitFactory;
+import game.framework.extended.PlayableUnitFactory;
+import game.framework.extended.Team;
 import game.framework.extended.UniqueGameUniverse;
+import game.framework.extended.UnitFactory;
 import game.rule.GameOverlapRules;
 import gameframework.core.*;
 import gameframework.moves_rules.MoveBlockerChecker;
@@ -74,11 +78,18 @@ public class GameLevelOne extends GameLevelDefaultImpl {
         GameOverlapRules overlapRules = new GameOverlapRules(life[0], score[0], endOfGame);
         overlapProcessor.setOverlapRules(overlapRules);
 
-        UniqueGameUniverse.init(moveBlockerChecker, overlapProcessor);
+        UniqueGameUniverse.init(moveBlockerChecker, overlapProcessor);     
 
         universe = UniqueGameUniverse.getInstance();
+        
+        UnitFactory factoryTeam1 = new PlayableUnitFactory(universe);
+        factoryTeam1.setupCanvas(canvas);
+        
+        UnitFactory factoryTeam2 = new AIUnitFactory(universe);
+        factoryTeam2.setupCanvas(canvas);
 
-        UniqueGameUniverse.getInstance().setupCanvas(canvas);
+        Team t1 = new Team("Team 1", factoryTeam1);
+        Team t2 = new Team("Team 2", factoryTeam2);
 
         gameBoard = new GameUniverseViewPortDefaultImpl(canvas, universe);
         ((CanvasDefaultImpl) canvas).setDrawingGameBoard(gameBoard);
@@ -92,11 +103,16 @@ public class GameLevelOne extends GameLevelDefaultImpl {
             }
         }
 
-        UniqueGameUniverse.getInstance().addSoldier(14, 17);
-        UniqueGameUniverse.getInstance().addBarrack(5, 5);
-        UniqueGameUniverse.getInstance().addGarage(20, 20);
-        UniqueGameUniverse.getInstance().addSoldier(14, 16);
-        UniqueGameUniverse.getInstance().addVehicle(10, 10);
+        factoryTeam1.addSoldier(14, 17);
+        factoryTeam1.addBarrack(5, 5);
+        factoryTeam1.addGarage(20, 20);
+        factoryTeam1.addSoldier(14, 16);
+        factoryTeam1.addVehicle(10, 10);
+        
+        factoryTeam2.addSoldier(2, 2);
+        factoryTeam2.addBarrack(2, 3);
+        factoryTeam2.addVehicle(2, 4);
+        factoryTeam2.addGarage(2, 5);
     }
 
     public GameLevelOne(Game g) {

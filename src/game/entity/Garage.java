@@ -2,6 +2,8 @@ package game.entity;
 
 import game.Main;
 import game.framework.extended.UniqueGameUniverse;
+import game.framework.extended.UnitFactory;
+import game.tools.UnitBuildFunction;
 import gameframework.core.Drawable;
 import gameframework.core.DrawableImage;
 import gameframework.core.GameEntity;
@@ -10,25 +12,27 @@ import gameframework.moves_rules.MoveBlocker;
 import java.awt.*;
 
 public class Garage implements Drawable, GameEntity, Building, MoveBlocker {
-    protected static DrawableImage image = null;
+    protected DrawableImage image = null;
     protected static DrawableImage imageSelected = null;
     private int x, y;
     public static final int RENDERING_SIZE = 16;
     public static final int BUILD_TIME = 2000;
     private Runnable builder;
     private Thread builderThread;
-    private boolean isSelected = false;
+    private boolean isSelected;
 
-    public Garage(Canvas defaultCanvas, int xx, int yy) {
-        image = new DrawableImage("images/airport.gif", defaultCanvas);
+    public Garage(Canvas defaultCanvas, int xx, int yy, UnitFactory f, String imgPath) {
+        image = new DrawableImage(imgPath, defaultCanvas);
         imageSelected = new DrawableImage("images/airport_selected.gif", defaultCanvas);
         x = xx;
         y = yy;
+        
+        isSelected = false;
 
         builder = () -> {
             try {
                 Thread.sleep(BUILD_TIME);
-                UniqueGameUniverse.getInstance().addVehicle(x / Main.SPRITE_SIZE + 1, y / Main.SPRITE_SIZE);
+                f.addVehicle(x / Main.SPRITE_SIZE + 1, y / Main.SPRITE_SIZE);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -36,6 +40,7 @@ public class Garage implements Drawable, GameEntity, Building, MoveBlocker {
 
         builderThread = new Thread(builder);
     }
+
 
     public void draw(Graphics g) {
         if (isSelected) {

@@ -1,21 +1,27 @@
 package game.entity;
 
 import gameframework.core.*;
+import soldier.core.UnitSimple;
+import soldier.units.UnitVehicle;
 
 import java.awt.*;
 
 public class Vehicle extends GameMovable implements Drawable, GameEntity,
     Overlappable {
+	public static final int RENDERING_SIZE = 16;
+	
     protected final SpriteManager spriteManager;
-    public static final int RENDERING_SIZE = 16;
     protected boolean movable = true;
     protected boolean vulnerable = false;
     protected int vulnerableTimer = 0;
+    protected UnitSimple core;
 
-    public Vehicle(Canvas defaultCanvas) {
-        spriteManager = new SpriteManagerDefaultImpl("images/militaryvehicle.gif",
+    public Vehicle(Canvas defaultCanvas, String imgPath) {
+        spriteManager = new SpriteManagerDefaultImpl(imgPath,
             defaultCanvas, RENDERING_SIZE, 4);
         spriteManager.setTypes("idle", "right", "down", "up", "left");
+        
+        core = new UnitVehicle("vehicle");
     }
 
     public void draw(Graphics g) {
@@ -50,4 +56,8 @@ public class Vehicle extends GameMovable implements Drawable, GameEntity,
     public Rectangle getBoundingBox() {
         return (new Rectangle(0, 0, RENDERING_SIZE, RENDERING_SIZE));
     }
+    
+    public UnitSimple getCore(){
+		return this.core;
+	}
 }

@@ -1,6 +1,6 @@
 /**
  * D. Auber & P. Narbel
- * Solution TD Architecture Logicielle 2016 Université Bordeaux.
+ * Solution TD Architecture Logicielle 2016 Universite Bordeaux.
  */
 package soldier.units;
 
@@ -13,7 +13,7 @@ public class UnitRobot extends UnitInfantry {
 	public UnitRobot(String soldierName) {
 		super(soldierName, new BehaviorSoldierHealthBased( 50, 100));
 	}
-	
+
 	/**
 	 * A Robot can have at most four equipments
 	 */
@@ -23,5 +23,5 @@ public class UnitRobot extends UnitInfantry {
 		super.addEquipment(w);
 	}
 
-	
+
 }

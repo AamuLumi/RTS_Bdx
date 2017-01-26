@@ -10,77 +10,89 @@ import game.entity.Soldier;
 import game.entity.Vehicle;
 import gameframework.core.GameMovableDriverDefaultImpl;
 import gameframework.core.GameUniverse;
+import soldier.core.AgeAbstractFactory;
 
 public class PlayableUnitFactory implements UnitFactory {
 
-	private Canvas canvas;
-	private GameUniverse gameUniverse;
-	private Team team;
+    private Canvas canvas;
+    private GameUniverse gameUniverse;
+    private Team team;
+    private AgeAbstractFactory age;
 
-	public PlayableUnitFactory(GameUniverse g) {
-		this.gameUniverse = g;
-	}
+    public PlayableUnitFactory(GameUniverse g, AgeAbstractFactory a) {
+        this.gameUniverse = g;
+        this.age = a;
+    }
 
-	public void setupCanvas(Canvas c) {
-		this.canvas = c;
-	}
+    public void setupCanvas(Canvas c) {
+        this.canvas = c;
+    }
 
-	public void setTeam(Team t) {
-		this.team = t;
-	}
+    public void setTeam(Team t) {
+        this.team = t;
+    }
 
-	public synchronized void addSoldier(int x, int y) {
-		GameMovableDriverDefaultImpl soldierDriver = new GameMovableDriverDefaultImpl();
-		Soldier currentSoldier = new Soldier(canvas, "images/soldier.gif");
+    @Override
+    public void setAge(AgeAbstractFactory a) {
+        this.age = a;
+    }
 
-		currentSoldier.setPosition(new Point(x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE));
+    public synchronized void addSoldier(int x, int y) {
+        GameMovableDriverDefaultImpl soldierDriver = new GameMovableDriverDefaultImpl();
+        Soldier currentSoldier = new Soldier(canvas, "images/soldier.gif");
+        currentSoldier.addEquipment(age.attackWeapon());
 
-		MoveStrategyMouse mouseStr = new MoveStrategyMouse(currentSoldier);
+        currentSoldier.setPosition(new Point(x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE));
 
-		soldierDriver.setStrategy(mouseStr);
-		canvas.addMouseListener(mouseStr);
+        MoveStrategyMouse mouseStr = new MoveStrategyMouse(currentSoldier);
 
-		currentSoldier.setDriver(soldierDriver);
+        soldierDriver.setStrategy(mouseStr);
+        canvas.addMouseListener(mouseStr);
 
-		team.addUnit(currentSoldier.getCore());
+        currentSoldier.setDriver(soldierDriver);
 
-		gameUniverse.addGameEntity(currentSoldier);
-	}
+        team.addUnit(currentSoldier.getCore());
 
-	public synchronized void addVehicle(int x, int y) {
-		GameMovableDriverDefaultImpl vehicleDriver = new GameMovableDriverDefaultImpl();
-		Vehicle currentVehicle = new Vehicle(canvas, "images/militaryvehicle.gif");
-		MoveStrategyMouse mouseStr = new MoveStrategyMouse(currentVehicle);
+        gameUniverse.addGameEntity(currentSoldier);
+    }
 
-		vehicleDriver.setStrategy(mouseStr);
-		canvas.addMouseListener(mouseStr);
+    public synchronized void addVehicle(int x, int y) {
+        GameMovableDriverDefaultImpl vehicleDriver = new GameMovableDriverDefaultImpl();
+        Vehicle currentVehicle = new Vehicle(canvas, "images/militaryvehicle.gif");
+        currentVehicle.addEquipment(age.attackWeapon());
+        currentVehicle.addEquipment(age.defenseWeapon());
+// TODO: Game crashes if you add a second equipment.
+        MoveStrategyMouse mouseStr = new MoveStrategyMouse(currentVehicle);
 
-		currentVehicle.setDriver(vehicleDriver);
-		currentVehicle.setPosition(new Point(x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE));
+        vehicleDriver.setStrategy(mouseStr);
+        canvas.addMouseListener(mouseStr);
 
-		team.addUnit(currentVehicle.getCore());
+        currentVehicle.setDriver(vehicleDriver);
+        currentVehicle.setPosition(new Point(x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE));
 
-		gameUniverse.addGameEntity(currentVehicle);
-	}
+        team.addUnit(currentVehicle.getCore());
 
-	public void addBarrack(int x, int y) {
-		Barrack soldierBarrack = new Barrack(canvas, x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE, this,
-				"images/factory.gif");
-		BuildStrategyMouse buildingStr = new BuildStrategyMouse(soldierBarrack);
+        gameUniverse.addGameEntity(currentVehicle);
+    }
 
-		canvas.addMouseListener(buildingStr);
+    public void addBarrack(int x, int y) {
+        Barrack soldierBarrack = new Barrack(canvas, x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE, this,
+            "images/factory.gif");
+        BuildStrategyMouse buildingStr = new BuildStrategyMouse(soldierBarrack);
 
-		gameUniverse.addGameEntity(soldierBarrack);
-	}
+        canvas.addMouseListener(buildingStr);
 
-	public void addGarage(int x, int y) {
-		Garage vehicleGarage = new Garage(canvas, x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE, this,
-				"images/airport.gif");
-		BuildStrategyMouse buildingStr = new BuildStrategyMouse(vehicleGarage);
+        gameUniverse.addGameEntity(soldierBarrack);
+    }
 
-		canvas.addMouseListener(buildingStr);
+    public void addGarage(int x, int y) {
+        Garage vehicleGarage = new Garage(canvas, x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE, this,
+            "images/airport.gif");
+        BuildStrategyMouse buildingStr = new BuildStrategyMouse(vehicleGarage);
 
-		gameUniverse.addGameEntity(vehicleGarage);
-	}
+        canvas.addMouseListener(buildingStr);
+
+        gameUniverse.addGameEntity(vehicleGarage);
+    }
 
 }

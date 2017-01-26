@@ -1,6 +1,6 @@
 /**
  * D. Auber & P. Narbel
- * Solution TD Architecture Logicielle 2016 Université Bordeaux.
+ * Solution TD Architecture Logicielle 2016 Universite Bordeaux.
  */
 package test;
 
@@ -25,8 +25,8 @@ import soldier.util.WeaponCounterVisitor;
 public class TestFightTwoAges {
 
 	AgeAbstractFactory age1, age2;
-	Unit team1, team2; 
-	
+	Unit team1, team2;
+
 	static Unit createTeam(AgeAbstractFactory fact, String prefix)  {
 		UnitGroup sg = new UnitGroup(prefix + "Animals");
 		UnitGroup bl  = new UnitGroup(prefix + "Worms");
@@ -36,7 +36,7 @@ public class TestFightTwoAges {
 		bl.addEquipment(fact.attackWeapon());
 		bl.addEquipment(fact.defenseWeapon());
 		bl.addEquipment(fact.attackWeapon());
-		
+
 		UnitGroup pig = new UnitGroup(prefix + "Pigs");
 		pig.addUnit(fact.riderUnit(prefix + "jenny"));
 		pig.addUnit(fact.riderUnit(prefix + "kenny"));
@@ -46,15 +46,15 @@ public class TestFightTwoAges {
 		pig.addEquipment(fact.attackWeapon());
 		return sg;
 	}
-	
+
 	@Before
-	public void setUp() throws Exception {	
+	public void setUp() throws Exception {
  		 age1 = new AgeMiddleFactory();
 		 age2 = new AgeFutureFactory();
-		 team1 = createTeam(age1, "Team1::"); 
-		 team2 = createTeam(age2, "Team2::"); 
+		 team1 = createTeam(age1, "Team1::");
+		 team2 = createTeam(age2, "Team2::");
 	}
-	
+
 	@Test
 	public void createTeam1Test() {
 		ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -78,7 +78,7 @@ public class TestFightTwoAges {
 				+ "Impossible to add Nerf to Team2::kenny\r\n";
 		assertEquals(expectedOutput, stream.toString());
 	}
- 
+
 	@Test
 	public void WeaponCounterTest() {
 		UnitVisitor visitor = new AddSimpleUnitObserver(new DeadUnitCounterObserver());
@@ -87,24 +87,24 @@ public class TestFightTwoAges {
 
 		WeaponCounterVisitor c1 = new WeaponCounterVisitor();
 		team1.accept(c1);
-//		System.out.println(team1.getName() + " has got " + c1.attWeapon + 
+//		System.out.println(team1.getName() + " has got " + c1.attWeapon +
 //		" attack weapons and "  + c1.defWeapon + " defense weapon");
         assertEquals(c1.attWeapon, 4);
         assertEquals(c1.defWeapon, 4);
 
         c1.clear();
 		team2.accept(c1);
-//		System.out.println(team2.getName() + " has got " + c1.attWeapon + 
+//		System.out.println(team2.getName() + " has got " + c1.attWeapon +
 //		" attack weapons and "  + c1.defWeapon + " defense weapon");
         assertEquals(c1.attWeapon, 4);
         assertEquals(c1.defWeapon, 4);
-	}		
+	}
 
     @Test
     public void fightTest() {
     	System.out.println("IN TEST");
 		int round = 0;
-		float st1 = 0, st2 = 0; 
+		float st1 = 0, st2 = 0;
 		while(team1.alive() && team2.alive()) {
 			round++;
 			st1 = team1.strike();
@@ -116,11 +116,11 @@ public class TestFightTwoAges {
 			System.out.println(team2.getName() + " attack with force : " + st2);
 		}
 		assertEquals(round, 2);
-		assertEquals(st1, 222.0, 0.00001);	
-		assertEquals(st2, 0.0, 0.00001);	
+		assertEquals(st1, 222.0, 0.00001);
+		assertEquals(st2, 0.0, 0.00001);
         assertEquals(team1.alive(), true);
-        assertEquals(team2.alive(), false);        
-//	    System.out.println("The end ... " + (team1.alive() ? team1.getName() : 
+        assertEquals(team2.alive(), false);
+//	    System.out.println("The end ... " + (team1.alive() ? team1.getName() :
 //      team2.getName()) + " won." );
 	}
 

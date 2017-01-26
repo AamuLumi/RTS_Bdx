@@ -1,6 +1,6 @@
 /**
  * D. Auber & P. Narbel
- * Solution TD Architecture Logicielle 2016 Université Bordeaux.
+ * Solution TD Architecture Logicielle 2016 Universite Bordeaux.
  */
 package test;
 
@@ -35,15 +35,15 @@ public class MainFightTwoAges {
 		pig.addEquipment(fact.attackWeapon());
 		return sg;
 	}
-	
+
 	public static void main(String[] args) {
-		
+
 		AgeAbstractFactory age1 = new AgeMiddleFactory();
 		AgeAbstractFactory age2 = new AgeFutureFactory();
 
-		Unit team1 = createTeam(age1, "Team1::"); 
-		Unit team2 = createTeam(age2, "Team2::"); 
-		
+		Unit team1 = createTeam(age1, "Team1::");
+		Unit team2 = createTeam(age2, "Team2::");
+
 		UnitVisitor visitor = new AddSimpleUnitObserver(new DeadUnitCounterObserver());
 
 		team1.accept(visitor);
@@ -55,7 +55,7 @@ public class MainFightTwoAges {
 		c1.clear();
 		team2.accept(c1);
 		System.out.println(team2.getName() + " has got " + c1.attWeapon + " attack weapons and "  + c1.defWeapon + " defense weapon");
-		
+
 		int round = 0;
 		while(team1.alive() && team2.alive()) {
 			System.out.println("Round  #" + round++);

@@ -1,6 +1,6 @@
 /**
  * D. Auber & P. Narbel
- * Solution TD Architecture Logicielle 2016 Université Bordeaux.
+ * Solution TD Architecture Logicielle 2016 Universite Bordeaux.
  */
 package soldier.core;
 
@@ -9,7 +9,7 @@ import java.util.Iterator;
 
 import observer_util.ObservableAbstract;
 
-public abstract class UnitSimple extends ObservableAbstract<Unit> 
+public abstract class UnitSimple extends ObservableAbstract<Unit>
                                  implements Unit {
 
 	private BehaviorSoldier behavior;

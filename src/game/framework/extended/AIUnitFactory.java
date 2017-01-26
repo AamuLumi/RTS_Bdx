@@ -1,66 +1,74 @@
 package game.framework.extended;
 
-import java.awt.Canvas;
-import java.awt.Point;
-
 import game.Main;
 import game.entity.Barrack;
 import game.entity.Garage;
 import game.entity.Soldier;
 import game.entity.Vehicle;
-import gameframework.core.GameMovableDriverDefaultImpl;
 import gameframework.core.GameUniverse;
+import soldier.core.AgeAbstractFactory;
+
+import java.awt.*;
 
 public class AIUnitFactory implements UnitFactory {
 
-	private Canvas canvas;
-	private GameUniverse gameUniverse;
-	private Team team;
+    private Canvas canvas;
+    private GameUniverse gameUniverse;
+    private Team team;
+    private AgeAbstractFactory age;
 
-	public AIUnitFactory(GameUniverse g) {
-		this.gameUniverse = g;
-	}
+    public AIUnitFactory(GameUniverse g, AgeAbstractFactory age) {
+        this.gameUniverse = g;
+        this.age = age;
+    }
 
-	public void setupCanvas(Canvas c) {
-		this.canvas = c;
-	}
+    public void setupCanvas(Canvas c) {
+        this.canvas = c;
+    }
 
-	public void setTeam(Team t) {
-		this.team = t;
-	}
+    public void setTeam(Team t) {
+        this.team = t;
+    }
 
-	public synchronized void addSoldier(int x, int y) {
-		Soldier currentSoldier = new Soldier(canvas, "images/soldier_ai.gif");
+    @Override
+    public void setAge(AgeAbstractFactory a) {
+        this.age = a;
+    }
 
-		currentSoldier.setPosition(new Point(x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE));
+    public synchronized void addSoldier(int x, int y) {
+        Soldier currentSoldier = new Soldier(canvas, "images/soldier_ai.gif");
+        currentSoldier.addEquipment(age.attackWeapon());
 
-		team.addUnit(currentSoldier.getCore());
+        currentSoldier.setPosition(new Point(x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE));
 
-		gameUniverse.addGameEntity(currentSoldier);
-	}
+        team.addUnit(currentSoldier.getCore());
 
-	public synchronized void addVehicle(int x, int y) {
-		Vehicle currentVehicle = new Vehicle(canvas, "images/militaryvehicle_ai.gif");
+        gameUniverse.addGameEntity(currentSoldier);
+    }
 
-		currentVehicle.setPosition(new Point(x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE));
+    public synchronized void addVehicle(int x, int y) {
+        Vehicle currentVehicle = new Vehicle(canvas, "images/militaryvehicle_ai.gif");
+        currentVehicle.addEquipment(age.attackWeapon());
 
-		team.addUnit(currentVehicle.getCore());
+        currentVehicle.setPosition(new Point(x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE));
 
-		gameUniverse.addGameEntity(currentVehicle);
-	}
+        team.addUnit(currentVehicle.getCore());
 
-	public void addBarrack(int x, int y) {
-		Barrack soldierBarrack = new Barrack(canvas, x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE, this,
-				"images/factory_ai.gif");
+        gameUniverse.addGameEntity(currentVehicle);
+    }
 
-		gameUniverse.addGameEntity(soldierBarrack);
-	}
+    public void addBarrack(int x, int y) {
+        Barrack soldierBarrack = new Barrack(canvas, x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE, this,
+            "images/factory_ai.gif");
 
-	public void addGarage(int x, int y) {
-		Garage vehicleGarage = new Garage(canvas, x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE, this,
-				"images/airport_ai.gif");
+        gameUniverse.addGameEntity(soldierBarrack);
+    }
 
-		gameUniverse.addGameEntity(vehicleGarage);
-	}
+    public void addGarage(int x, int y) {
+        Garage vehicleGarage = new Garage(canvas, x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE, this,
+            "images/airport_ai.gif");
+
+        gameUniverse.addGameEntity(vehicleGarage);
+    }
 
 }

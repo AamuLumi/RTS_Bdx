@@ -1,13 +1,13 @@
 /**
  * D. Auber & P. Narbel
- * Solution TD Architecture Logicielle 2016 Université Bordeaux.
+ * Solution TD Architecture Logicielle 2016 Universite Bordeaux.
  */
 package soldier.core;
 
 import java.util.Iterator;
 
 import observer_util.Observable;
- 
+
 public interface Unit extends Observable<Unit> {
 	/**
 	 * Unit methods
@@ -16,7 +16,7 @@ public interface Unit extends Observable<Unit> {
 	public float getHealthPoints();
 	public boolean alive();
 	public void heal();
-	public float parry(float force); 
+	public float parry(float force);
 	public float strike();
 
 	/**

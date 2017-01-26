@@ -1,6 +1,6 @@
 /**
  * D. Auber & P. Narbel
- * Solution TD Architecture Logicielle 2016 Université Bordeaux.
+ * Solution TD Architecture Logicielle 2016 Universite Bordeaux.
  */
 package soldier.core;
 
@@ -48,7 +48,7 @@ public abstract class BehaviorExtension implements BehaviorSoldier {
 
 	/**
 	 * Function to manage the decoration chain
-	 * 
+	 *
 	 * @visibility package
 	 */
 	BehaviorSoldier parent() {

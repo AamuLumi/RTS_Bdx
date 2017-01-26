@@ -88,8 +88,4 @@ public class GameOverlapRules extends OverlapRulesApplierDefaultImpl {
             attack(m1, m2);
         }
     }
-
-    private void checkTeamIsAlive() {
-
-    }
 }

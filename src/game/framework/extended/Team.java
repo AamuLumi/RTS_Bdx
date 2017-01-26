@@ -1,5 +1,7 @@
 package game.framework.extended;
 
+import game.entity.MilitaryUnit;
+import gameframework.core.GameEntity;
 import soldier.core.UnitGroup;
 
 public class Team extends UnitGroup {
@@ -11,5 +13,13 @@ public class Team extends UnitGroup {
         this.unitFactory = f;
 
         this.unitFactory.setTeam(this);
+    }
+    
+    public void removeUnit(MilitaryUnit m){
+    	UniqueGameUniverse.getInstance().removeGameEntity(m);
+    	
+    	super.removeUnit(m.getCore());
+    	
+    	m.destruct();
     }
 }

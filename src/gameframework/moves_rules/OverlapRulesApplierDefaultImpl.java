@@ -5,6 +5,8 @@ import gameframework.core.Overlappable;
 import java.lang.reflect.Method;
 import java.util.Vector;
 
+import game.entity.MilitaryUnit;
+
 public abstract class OverlapRulesApplierDefaultImpl implements
 		OverlapRulesApplier {
 

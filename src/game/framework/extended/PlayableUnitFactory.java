@@ -50,6 +50,7 @@ public class PlayableUnitFactory implements UnitFactory {
         canvas.addMouseListener(mouseStr);
 
         currentSoldier.setDriver(soldierDriver);
+        currentSoldier.setDestruct(() -> canvas.removeMouseListener(mouseStr));
 
         team.addUnit(currentSoldier.getCore());
 
@@ -61,7 +62,7 @@ public class PlayableUnitFactory implements UnitFactory {
         Vehicle currentVehicle = new Vehicle(canvas, "images/militaryvehicle.gif");
         currentVehicle.addEquipment(age.attackWeapon());
         currentVehicle.addEquipment(age.defenseWeapon());
-// TODO: Game crashes if you add a second equipment.
+        
         MoveStrategyMouse mouseStr = new MoveStrategyMouse(currentVehicle);
 
         vehicleDriver.setStrategy(mouseStr);
@@ -69,6 +70,7 @@ public class PlayableUnitFactory implements UnitFactory {
 
         currentVehicle.setDriver(vehicleDriver);
         currentVehicle.setPosition(new Point(x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE));
+        currentVehicle.setDestruct(() -> canvas.removeMouseListener(mouseStr));
 
         team.addUnit(currentVehicle.getCore());
 

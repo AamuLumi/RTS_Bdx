@@ -8,7 +8,7 @@ import soldier.core.Weapon;
 public class UnitVehicle extends UnitRider {
 
 	public UnitVehicle(String soldierName) {
-		super(soldierName, new BehaviorSoldierStd(20, 120));
+		super(soldierName, new BehaviorSoldierStd(120, 20));
 	}
 
 	/**
@@ -16,7 +16,7 @@ public class UnitVehicle extends UnitRider {
 	 */
 	@Override
 	public void addEquipment(Weapon w) {
-		if (nbWeapons() > 0)
+		if (nbWeapons() > 1)
 			throw new BreakingRuleException();
 		super.addEquipment(w);
 	}

@@ -70,6 +70,7 @@ public class MoveStrategyMouse extends MouseAdapter implements MoveStrategy {
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getButton() == MouseEvent.BUTTON1 && isOnUnit(e.getPoint())) {
+        	System.out.println("ok");
             this.isSelected = true;
         } else if (isSelected && e.getButton() == MouseEvent.BUTTON3) {
             destination = e.getPoint();

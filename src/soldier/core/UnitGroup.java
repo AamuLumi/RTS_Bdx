@@ -142,5 +142,17 @@ public class UnitGroup extends ObservableAbstract<Unit>
 				.removeEquipment(w)) {
 		}
 	}
+	
+	public boolean containsUnit(Unit s){
+		Iterator<Unit> iterator = this.subUnits();
+		
+		while (iterator.hasNext()){
+			if (iterator.next().equals(s)){
+				return true;
+			}
+		}
+		
+		return false;
+	}
 
 }

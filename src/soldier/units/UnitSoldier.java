@@ -8,7 +8,7 @@ import soldier.core.Weapon;
 public class UnitSoldier extends UnitRider {
 
 	public UnitSoldier(String soldierName) {
-		super(soldierName, new BehaviorSoldierStd(10, 80));
+		super(soldierName, new BehaviorSoldierStd(80, 10));
 	}
 
 	/**

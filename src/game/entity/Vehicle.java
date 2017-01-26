@@ -7,8 +7,10 @@ import soldier.units.UnitVehicle;
 
 import java.awt.*;
 
-public class Vehicle extends GameMovable implements Drawable, GameEntity,
-    Overlappable {
+import game.tools.DestructAction;
+
+public class Vehicle extends GameMovable implements Drawable,
+    Overlappable, MilitaryUnit{
     public static final int RENDERING_SIZE = 16;
 
     protected final SpriteManager spriteManager;
@@ -16,6 +18,7 @@ public class Vehicle extends GameMovable implements Drawable, GameEntity,
     protected boolean vulnerable = false;
     protected int vulnerableTimer = 0;
     protected UnitSimple core;
+    protected DestructAction destructAction;
 
     public Vehicle(Canvas defaultCanvas, String imgPath) {
         spriteManager = new SpriteManagerDefaultImpl(imgPath,
@@ -65,4 +68,14 @@ public class Vehicle extends GameMovable implements Drawable, GameEntity,
     public void addEquipment(Weapon w) {
         this.core.addEquipment(w);
     }
+    
+    public void setDestruct(DestructAction a){
+		this.destructAction = a;
+	}
+	
+	public void destruct(){
+		if (destructAction != null){
+			destructAction.destruct();
+		}
+	}
 }

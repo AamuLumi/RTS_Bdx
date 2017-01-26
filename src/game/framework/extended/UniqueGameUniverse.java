@@ -13,7 +13,7 @@ import gameframework.core.GameUniverseDefaultImpl;
 import gameframework.moves_rules.MoveBlockerChecker;
 import gameframework.moves_rules.OverlapProcessor;
 
-public class UniqueGameUniverse extends GameUniverseDefaultImpl {
+public class UniqueGameUniverse extends GameUniverseRTS {
 
     private static UniqueGameUniverse instance;
 
@@ -28,5 +28,4 @@ public class UniqueGameUniverse extends GameUniverseDefaultImpl {
     public static void init(MoveBlockerChecker obs, OverlapProcessor col) {
         instance = new UniqueGameUniverse(obs, col);
     }
-    
 }

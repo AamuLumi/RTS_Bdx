@@ -15,11 +15,11 @@ import soldier.core.AgeAbstractFactory;
 public class PlayableUnitFactory implements UnitFactory {
 
     private Canvas canvas;
-    private GameUniverse gameUniverse;
+    private GameUniverseRTS gameUniverse;
     private Team team;
     private AgeAbstractFactory age;
 
-    public PlayableUnitFactory(GameUniverse g, AgeAbstractFactory a) {
+    public PlayableUnitFactory(GameUniverseRTS g, AgeAbstractFactory a) {
         this.gameUniverse = g;
         this.age = a;
     }
@@ -47,6 +47,7 @@ public class PlayableUnitFactory implements UnitFactory {
         MoveStrategyMouse mouseStr = new MoveStrategyMouse(currentSoldier);
 
         soldierDriver.setStrategy(mouseStr);
+        soldierDriver.setmoveBlockerChecker(gameUniverse.getMoveBlockerChecker());
         canvas.addMouseListener(mouseStr);
 
         currentSoldier.setDriver(soldierDriver);
@@ -62,10 +63,11 @@ public class PlayableUnitFactory implements UnitFactory {
         Vehicle currentVehicle = new Vehicle(canvas, "images/militaryvehicle.gif");
         currentVehicle.addEquipment(age.attackWeapon());
         currentVehicle.addEquipment(age.defenseWeapon());
-        
+
         MoveStrategyMouse mouseStr = new MoveStrategyMouse(currentVehicle);
 
         vehicleDriver.setStrategy(mouseStr);
+        vehicleDriver.setmoveBlockerChecker(gameUniverse.getMoveBlockerChecker());
         canvas.addMouseListener(mouseStr);
 
         currentVehicle.setDriver(vehicleDriver);

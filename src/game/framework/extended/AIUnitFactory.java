@@ -5,7 +5,9 @@ import game.entity.Barrack;
 import game.entity.Garage;
 import game.entity.Soldier;
 import game.entity.Vehicle;
-import gameframework.core.GameUniverse;
+import game.rule.AIMovableDriver;
+import gameframework.core.GameMovableDriverDefaultImpl;
+import gameframework.moves_rules.MoveStrategyRandom;
 import soldier.core.AgeAbstractFactory;
 
 import java.awt.*;
@@ -13,11 +15,11 @@ import java.awt.*;
 public class AIUnitFactory implements UnitFactory {
 
     private Canvas canvas;
-    private GameUniverse gameUniverse;
+    private GameUniverseRTS gameUniverse;
     private Team team;
     private AgeAbstractFactory age;
 
-    public AIUnitFactory(GameUniverse g, AgeAbstractFactory age) {
+    public AIUnitFactory(GameUniverseRTS g, AgeAbstractFactory age) {
         this.gameUniverse = g;
         this.age = age;
     }
@@ -43,6 +45,12 @@ public class AIUnitFactory implements UnitFactory {
 
         team.addUnit(currentSoldier.getCore());
 
+        GameMovableDriverDefaultImpl aiDriver = new AIMovableDriver();
+        MoveStrategyRandom ranStr = new MoveStrategyRandom();
+        aiDriver.setStrategy(ranStr);
+        aiDriver.setmoveBlockerChecker(gameUniverse.getMoveBlockerChecker());
+        currentSoldier.setDriver(aiDriver);
+
         gameUniverse.addGameEntity(currentSoldier);
     }
 
@@ -53,6 +61,12 @@ public class AIUnitFactory implements UnitFactory {
         currentVehicle.setPosition(new Point(x * Main.SPRITE_SIZE, y * Main.SPRITE_SIZE));
 
         team.addUnit(currentVehicle.getCore());
+
+        GameMovableDriverDefaultImpl aiDriver = new AIMovableDriver();
+        MoveStrategyRandom ranStr = new MoveStrategyRandom();
+        aiDriver.setStrategy(ranStr);
+        aiDriver.setmoveBlockerChecker(gameUniverse.getMoveBlockerChecker());
+        currentVehicle.setDriver(aiDriver);
 
         gameUniverse.addGameEntity(currentVehicle);
     }

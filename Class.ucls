@@ -22,7 +22,7 @@
   </class>  
   <interface id="3" language="java" name="game.entity.MilitaryUnit" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/entity/MilitaryUnit.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="153" y="227"/>    
+    <position height="-1" width="-1" x="153" y="229"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -31,7 +31,7 @@
   </interface>  
   <class id="4" language="java" name="game.entity.Barrack" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/entity/Barrack.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="598" y="314"/>    
+    <position height="-1" width="-1" x="596" y="307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -40,7 +40,7 @@
   </class>  
   <interface id="5" language="java" name="game.entity.Building" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/entity/Building.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="655" y="222"/>    
+    <position height="-1" width="-1" x="655" y="229"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -49,7 +49,7 @@
   </interface>  
   <class id="6" language="java" name="game.entity.Vehicle" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/entity/Vehicle.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="72" y="314"/>    
+    <position height="-1" width="-1" x="70" y="307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -58,7 +58,7 @@
   </class>  
   <class id="7" language="java" name="game.entity.Soldier" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/entity/Soldier.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="211" y="314"/>    
+    <position height="-1" width="-1" x="209" y="307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -67,7 +67,7 @@
   </class>  
   <class id="8" language="java" name="game.entity.Garage" project="RTS_Bdx" file="/RTS_Bdx/src/game/entity/Garage.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="727" y="314"/>    
+    <position height="-1" width="-1" x="725" y="307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -76,7 +76,7 @@
   </class>  
   <class id="9" language="java" name="game.entity.Mountain" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/entity/Mountain.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="440" y="317"/>    
+    <position height="-1" width="-1" x="438" y="307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -85,7 +85,7 @@
   </class>  
   <class id="10" language="java" name="game.entity.Ground" project="RTS_Bdx" file="/RTS_Bdx/src/game/entity/Ground.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="343" y="315"/>    
+    <position height="-1" width="-1" x="341" y="307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -94,7 +94,7 @@
   </class>  
   <interface id="11" language="java" name="gameframework.core.GameEntity" project="RTS_Bdx" 
     file="/RTS_Bdx/src/gameframework/core/GameEntity.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="388" y="127"/>    
+    <position height="-1" width="-1" x="376" y="143"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -103,7 +103,7 @@
   </interface>  
   <class id="12" language="java" name="game.framework.extended.BuildStrategyMouse" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/framework/extended/BuildStrategyMouse.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="903" y="228"/>    
+    <position height="-1" width="-1" x="903" y="229"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -112,7 +112,7 @@
   </class>  
   <class id="13" language="java" name="game.framework.extended.MoveStrategyMouse" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/framework/extended/MoveStrategyMouse.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1078" y="228"/>    
+    <position height="-1" width="-1" x="1078" y="229"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -121,7 +121,7 @@
   </class>  
   <class id="14" language="java" name="game.framework.extended.PlayableUnitFactory" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/framework/extended/PlayableUnitFactory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="394" y="712"/>    
+    <position height="-1" width="-1" x="394" y="714"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -130,7 +130,7 @@
   </class>  
   <interface id="15" language="java" name="game.framework.extended.UnitFactory" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/framework/extended/UnitFactory.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="591" y="716"/>    
+    <position height="-1" width="-1" x="591" y="714"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -148,7 +148,7 @@
   </class>  
   <class id="17" language="java" name="game.framework.extended.UniqueGameUniverse" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/framework/extended/UniqueGameUniverse.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="643" y="128"/>    
+    <position height="-1" width="-1" x="631" y="143"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -166,7 +166,7 @@
   </class>  
   <class id="19" language="java" name="gameframework.core.GameUniverseDefaultImpl" project="RTS_Bdx" 
     file="/RTS_Bdx/src/gameframework/core/GameUniverseDefaultImpl.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="618" y="62"/>    
+    <position height="-1" width="-1" x="618" y="66"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -175,7 +175,7 @@
   </class>  
   <class id="20" language="java" name="game.rule.GameOverlapRules" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/rule/GameOverlapRules.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="762" y="568"/>    
+    <position height="-1" width="-1" x="762" y="570"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -184,7 +184,7 @@
   </class>  
   <interface id="21" language="java" name="game.tools.UnitBuildFunction" project="RTS_Bdx" 
     file="/RTS_Bdx/src/game/tools/UnitBuildFunction.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="874" y="314"/>    
+    <position height="-1" width="-1" x="872" y="307"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -202,7 +202,7 @@
   </interface>  
   <class id="23" language="java" name="soldier.core.UnitGroup" project="RTS_Bdx" 
     file="/RTS_Bdx/src/soldier/core/UnitGroup.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="583" y="473"/>    
+    <position height="-1" width="-1" x="583" y="477"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -211,7 +211,7 @@
   </class>  
   <interface id="24" language="java" name="soldier.core.Unit" project="RTS_Bdx" 
     file="/RTS_Bdx/src/soldier/core/Unit.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="377" y="383"/>    
+    <position height="-1" width="-1" x="377" y="390"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -220,7 +220,7 @@
   </interface>  
   <class id="25" language="java" name="soldier.core.UnitSimple" project="RTS_Bdx" 
     file="/RTS_Bdx/src/soldier/core/UnitSimple.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="142" y="481"/>    
+    <position height="-1" width="-1" x="142" y="477"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -229,7 +229,7 @@
   </class>  
   <interface id="26" language="java" name="gameframework.moves_rules.MoveBlocker" project="RTS_Bdx" 
     file="/RTS_Bdx/src/gameframework/moves_rules/MoveBlocker.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="498" y="220"/>    
+    <position height="-1" width="-1" x="498" y="229"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -247,7 +247,7 @@
   </interface>  
   <class id="28" language="java" name="gameframework.core.GameLevelDefaultImpl" project="RTS_Bdx" 
     file="/RTS_Bdx/src/gameframework/core/GameLevelDefaultImpl.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1212" y="388"/>    
+    <position height="-1" width="-1" x="1212" y="390"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -256,7 +256,7 @@
   </class>  
   <interface id="29" language="java" name="gameframework.core.GameUniverse" project="RTS_Bdx" 
     file="/RTS_Bdx/src/gameframework/core/GameUniverse.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1378" y="244"/>    
+    <position height="-1" width="-1" x="1378" y="229"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -265,7 +265,7 @@
   </interface>  
   <class id="30" language="java" name="java.awt.Canvas" project="RTS_Bdx" 
     file="/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar" binary="true" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1013" y="517"/>    
+    <position height="-1" width="-1" x="1020" y="477"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -274,7 +274,7 @@
   </class>  
   <class id="31" language="java" name="soldier.units.UnitVehicle" project="RTS_Bdx" 
     file="/RTS_Bdx/src/soldier/units/UnitVehicle.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="76" y="652"/>    
+    <position height="-1" width="-1" x="76" y="651"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -292,7 +292,7 @@
   </class>  
   <class id="33" language="java" name="soldier.core.UnitRider" project="RTS_Bdx" 
     file="/RTS_Bdx/src/soldier/core/UnitRider.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="82" y="561"/>    
+    <position height="-1" width="-1" x="82" y="570"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -301,7 +301,7 @@
   </class>  
   <class id="34" language="java" name="soldier.core.UnitInfantry" project="RTS_Bdx" 
     file="/RTS_Bdx/src/soldier/core/UnitInfantry.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="211" y="558"/>    
+    <position height="-1" width="-1" x="211" y="570"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -328,301 +328,354 @@
   </interface>  
   <interface id="37" language="java" name="gameframework.moves_rules.MoveStrategy" project="RTS_Bdx" 
     file="/RTS_Bdx/src/gameframework/moves_rules/MoveStrategy.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1032" y="120"/>    
+    <position height="-1" width="-1" x="868" y="143"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="false">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </interface>  
-  <association id="38">    
+  <class id="38" language="java" name="game.rule.RTSMoveBlockers" project="RTS_Bdx" 
+    file="/RTS_Bdx/src/game/rule/RTSMoveBlockers.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1211" y="570"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="gameframework.moves_rules.MoveBlockerRulesApplierDefaultImpl" project="RTS_Bdx" 
+    file="/RTS_Bdx/src/gameframework/moves_rules/MoveBlockerRulesApplierDefaultImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1215" y="714"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="game.rule.AIMovableDriver" project="RTS_Bdx" 
+    file="/RTS_Bdx/src/game/rule/AIMovableDriver.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1303" y="143"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="gameframework.core.GameMovableDriverDefaultImpl" project="RTS_Bdx" 
+    file="/RTS_Bdx/src/gameframework/core/GameMovableDriverDefaultImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1111" y="143"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="false" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <association id="42">    
     <bendpoint x="213" y="425"/>    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="39" name="core"/>      
-      <multiplicity id="40" minimum="0" maximum="1"/>    
+      <attribute id="43" name="core"/>      
+      <multiplicity id="44" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="25" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="41">    
+  <association id="45">    
     <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="42" name="t2"/>      
-      <multiplicity id="43" minimum="0" maximum="1"/>    
+      <attribute id="46" name="t2"/>      
+      <multiplicity id="47" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="44">    
-    <end type="SOURCE" refId="33"/>    
-    <end type="TARGET" refId="25"/>  
-  </generalization>  
-  <realization id="45">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="37"/>  
-  </realization>  
-  <association id="46">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="47" name="t1"/>      
-      <multiplicity id="48" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="18" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="49">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="50" name="canvas"/>      
-      <multiplicity id="51" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="52">    
-    <bendpoint x="430" y="838"/>    
-    <bendpoint x="1006" y="836"/>    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="53" name="canvas"/>      
-      <multiplicity id="54" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="55">    
-    <end type="SOURCE" refId="23"/>    
-    <end type="TARGET" refId="24"/>  
-  </realization>  
-  <realization id="56">    
-    <end type="SOURCE" refId="25"/>    
-    <end type="TARGET" refId="24"/>  
-  </realization>  
-  <realization id="57">    
+  <realization id="48">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="5"/>  
   </realization>  
-  <realization id="58">    
+  <realization id="49">    
     <bendpoint x="1381" y="66"/>    
     <end type="SOURCE" refId="19"/>    
     <end type="TARGET" refId="29"/>  
   </realization>  
-  <realization id="59">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <association id="60">    
-    <bendpoint x="74" y="424"/>    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="61" name="core"/>      
-      <multiplicity id="62" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="25" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="63">    
+  <realization id="50">    
     <end type="SOURCE" refId="35"/>    
     <end type="TARGET" refId="27"/>  
   </realization>  
-  <realization id="64">    
+  <realization id="51">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="5"/>  
   </realization>  
-  <realization id="65">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="11"/>  
-  </realization>  
-  <realization id="66">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <association id="67">    
+  <association id="52">    
     <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="68" name="team"/>      
-      <multiplicity id="69" minimum="0" maximum="1"/>    
+      <attribute id="53" name="team"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="70">    
+  <generalization id="55">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="41"/>  
+  </generalization>  
+  <association id="56">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="71" name="destructAction"/>      
-      <multiplicity id="72" minimum="0" maximum="1"/>    
+      <attribute id="57" name="destructAction"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="22" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="73">    
+  <realization id="59">    
     <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="11"/>  
   </realization>  
-  <generalization id="74">    
-    <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="19"/>  
-  </generalization>  
-  <generalization id="75">    
-    <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="34"/>  
-  </generalization>  
-  <association id="76">    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="77" name="universe"/>      
-      <multiplicity id="78" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="29" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="79">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="80" name="unitFactory"/>      
-      <multiplicity id="81" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="82">    
+  <association id="60">    
     <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="83" name="canvas"/>      
-      <multiplicity id="84" minimum="0" maximum="1"/>    
+      <attribute id="61" name="canvas"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="30" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="85">    
+  <association id="63">    
     <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="86" name="team"/>      
-      <multiplicity id="87" minimum="0" maximum="1"/>    
+      <attribute id="64" name="team"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="18" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="88">    
+  <association id="66">    
     <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="89" name="age"/>      
-      <multiplicity id="90" minimum="0" maximum="1"/>    
+      <attribute id="67" name="age"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="27" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="91">    
+  <dependency id="69">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
-  <association id="92">    
+  <association id="70">    
     <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="93" name="building"/>      
-      <multiplicity id="94" minimum="0" maximum="1"/>    
+      <attribute id="71" name="building"/>      
+      <multiplicity id="72" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="95">    
+  <generalization id="73">    
     <end type="SOURCE" refId="18"/>    
     <end type="TARGET" refId="23"/>  
   </generalization>  
-  <generalization id="96">    
-    <end type="SOURCE" refId="34"/>    
-    <end type="TARGET" refId="25"/>  
-  </generalization>  
-  <realization id="97">    
+  <realization id="74">    
     <end type="SOURCE" refId="13"/>    
     <end type="TARGET" refId="37"/>  
   </realization>  
-  <association id="98">    
+  <association id="75">    
     <bendpoint x="1041" y="365"/>    
     <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="99" name="gameUniverse"/>      
-      <multiplicity id="100" minimum="0" maximum="1"/>    
+      <attribute id="76" name="gameUniverse"/>      
+      <multiplicity id="77" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="29" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="101">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <generalization id="102">    
+  <generalization id="78">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="28"/>  
   </generalization>  
-  <realization id="103">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <association id="104">    
-    <bendpoint x="386" y="850"/>    
-    <bendpoint x="1378" y="845"/>    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="105" name="gameUniverse"/>      
-      <multiplicity id="106" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="29" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="107">    
+  <association id="79">    
     <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="108" name="age"/>      
-      <multiplicity id="109" minimum="0" maximum="1"/>    
+      <attribute id="80" name="age"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="27" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="110">    
-    <end type="SOURCE" refId="31"/>    
-    <end type="TARGET" refId="33"/>  
-  </generalization>  
-  <association id="111">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="112" name="unit"/>      
-      <multiplicity id="113" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="36" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="114">    
+  <realization id="82">    
     <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="26"/>  
   </realization>  
-  <generalization id="115">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="26"/>  
-  </generalization>  
-  <association id="116">    
+  <association id="83">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="117" name="destructAction"/>      
-      <multiplicity id="118" minimum="0" maximum="1"/>    
+      <attribute id="84" name="destructAction"/>      
+      <multiplicity id="85" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="22" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="119">    
+  <association id="86">    
     <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="120" name="units"/>      
-      <multiplicity id="121" minimum="0" maximum="2147483647"/>    
+      <attribute id="87" name="units"/>      
+      <multiplicity id="88" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="24" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="122">    
+  <generalization id="89">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="11"/>  
   </generalization>  
-  <association id="123">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="124" name="gameEntities"/>      
-      <multiplicity id="125" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="126">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="11"/>  
-  </generalization>  
-  <association id="127">    
+  <association id="90">    
     <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="128" name="instance"/>      
-      <multiplicity id="129" minimum="0" maximum="1"/>    
+      <attribute id="91" name="instance"/>      
+      <multiplicity id="92" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="17" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <dependency id="93">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <generalization id="94">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <realization id="95">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="37"/>  
+  </realization>  
+  <association id="96">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="97" name="t1"/>      
+      <multiplicity id="98" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="99">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="100" name="canvas"/>      
+      <multiplicity id="101" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="102">    
+    <bendpoint x="430" y="838"/>    
+    <bendpoint x="1006" y="836"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="103" name="canvas"/>      
+      <multiplicity id="104" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="105">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="24"/>  
+  </realization>  
+  <realization id="106">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="24"/>  
+  </realization>  
+  <realization id="107">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <association id="108">    
+    <bendpoint x="74" y="424"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="109" name="core"/>      
+      <multiplicity id="110" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="111">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <realization id="112">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <generalization id="113">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <association id="114">    
+    <end type="SOURCE" refId="28" navigable="false">      
+      <attribute id="115" name="universe"/>      
+      <multiplicity id="116" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="117">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="118" name="unitFactory"/>      
+      <multiplicity id="119" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="120">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="25"/>  
+  </generalization>  
+  <association id="121">    
+    <end type="SOURCE" refId="41" navigable="false">      
+      <attribute id="122" name="moveStrategy"/>      
+      <multiplicity id="123" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="37" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="124">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <realization id="125">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <association id="126">    
+    <bendpoint x="386" y="850"/>    
+    <bendpoint x="1378" y="845"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="127" name="gameUniverse"/>      
+      <multiplicity id="128" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="129">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="33"/>  
+  </generalization>  
+  <association id="130">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="131" name="unit"/>      
+      <multiplicity id="132" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="36" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="133">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="39"/>  
+  </generalization>  
+  <generalization id="134">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <association id="135">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="136" name="gameEntities"/>      
+      <multiplicity id="137" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="138">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="false">    
     <attributes public="false" package="false" protected="false" private="false" static="false"/>    

@@ -13,10 +13,7 @@ import gameframework.moves_rules.MoveBlockerChecker;
 import gameframework.moves_rules.MoveBlockerCheckerDefaultImpl;
 import gameframework.moves_rules.OverlapProcessor;
 import gameframework.moves_rules.OverlapProcessorDefaultImpl;
-import pacman.rule.PacmanMoveBlockers;
-import soldier.ages.AgeFutureFactory;
 import soldier.ages.AgeMiddleFactory;
-import soldier.util.*;
 import soldier.core.*;
 
 import java.awt.*;
@@ -69,7 +66,6 @@ public class GameLevelOne extends GameLevelDefaultImpl {
 		OverlapProcessor overlapProcessor = new OverlapProcessorDefaultImpl();
 
 		MoveBlockerChecker moveBlockerChecker = new MoveBlockerCheckerDefaultImpl();
-		moveBlockerChecker.setMoveBlockerRules(new PacmanMoveBlockers());
 
 		GameOverlapRules overlapRules = new GameOverlapRules(life[0], score[0], endOfGame);
 		overlapProcessor.setOverlapRules(overlapRules);

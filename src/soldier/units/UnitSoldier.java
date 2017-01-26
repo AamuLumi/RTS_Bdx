@@ -2,10 +2,11 @@ package soldier.units;
 
 import soldier.core.BehaviorSoldierStd;
 import soldier.core.BreakingRuleException;
+import soldier.core.UnitInfantry;
 import soldier.core.UnitRider;
 import soldier.core.Weapon;
 
-public class UnitSoldier extends UnitRider {
+public class UnitSoldier extends UnitInfantry {
 
 	public UnitSoldier(String soldierName) {
 		super(soldierName, new BehaviorSoldierStd(80, 10));

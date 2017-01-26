@@ -11,7 +11,7 @@ import gameframework.moves_rules.MoveBlocker;
 
 import java.awt.*;
 
-public class Garage implements Drawable, GameEntity, Building, MoveBlocker {
+public class Garage implements Drawable, Building {
     protected DrawableImage image = null;
     protected static DrawableImage imageSelected = null;
     private int x, y;

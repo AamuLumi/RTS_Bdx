@@ -13,7 +13,7 @@ import java.awt.Rectangle;
 import game.Main;
 import game.framework.extended.UnitFactory;
 
-public class Barrack implements Drawable, GameEntity, Building, MoveBlocker {
+public class Barrack implements Drawable, Building {
     protected DrawableImage image = null;
     protected static DrawableImage imageSelected = null;
     private int x, y;

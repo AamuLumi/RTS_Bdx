@@ -1,26 +1,16 @@
 package game.rule;
 
-import gameframework.core.GameMovableDriverDefaultImpl;
 import gameframework.core.GameUniverse;
 import gameframework.core.ObservableValue;
-import gameframework.moves_rules.MoveStrategyRandom;
-import gameframework.moves_rules.MoveStrategyStraightLine;
 import gameframework.moves_rules.Overlap;
 import gameframework.moves_rules.OverlapRulesApplierDefaultImpl;
 
-import java.awt.Point;
 import java.util.Vector;
 
 import game.entity.MilitaryUnit;
 import game.entity.Soldier;
 import game.entity.Vehicle;
 import game.framework.extended.Team;
-import pacman.entity.Ghost;
-import pacman.entity.Jail;
-import pacman.entity.Pacgum;
-import pacman.entity.Pacman;
-import pacman.entity.SuperPacgum;
-import pacman.entity.TeleportPairOfPoints;
 
 public class GameOverlapRules extends OverlapRulesApplierDefaultImpl {
     protected GameUniverse universe;

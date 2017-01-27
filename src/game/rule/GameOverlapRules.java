@@ -18,19 +18,22 @@ public class GameOverlapRules extends OverlapRulesApplierDefaultImpl {
     private final ObservableValue<Integer> score;
     private final ObservableValue<Integer> life;
     private final ObservableValue<Boolean> endOfGame;
-    private Team t1;
-    private Team t2;
+    private Team playableTeam;
+    private Team aiTeam;
 
     public GameOverlapRules(ObservableValue<Integer> life, ObservableValue<Integer> score,
                             ObservableValue<Boolean> endOfGame) {
         this.life = life;
         this.score = score;
         this.endOfGame = endOfGame;
+
+        this.score.setValue(0);
+        this.life.setValue(1);
     }
 
     public void setTeams(Team t1, Team t2) {
-        this.t1 = t1;
-        this.t2 = t2;
+        this.playableTeam = t1;
+        this.aiTeam = t2;
     }
 
     public void setUniverse(GameUniverse universe) {
@@ -38,8 +41,8 @@ public class GameOverlapRules extends OverlapRulesApplierDefaultImpl {
     }
 
     public boolean hasDifferentTeam(MilitaryUnit m1, MilitaryUnit m2) {
-        return (t1.containsUnit(m1.getCore()) && t2.containsUnit(m2.getCore())) ||
-            (t2.containsUnit(m1.getCore()) && t2.containsUnit(m1.getCore()));
+        return (playableTeam.containsUnit(m1.getCore()) && aiTeam.containsUnit(m2.getCore())) ||
+            (aiTeam.containsUnit(m1.getCore()) && aiTeam.containsUnit(m1.getCore()));
     }
 
     public void attack(MilitaryUnit m1, MilitaryUnit m2) {
@@ -50,18 +53,23 @@ public class GameOverlapRules extends OverlapRulesApplierDefaultImpl {
         m2.getCore().parry(m1Attack);
 
         if (!m1.getCore().alive()) {
-            t1.removeUnit(m1);
-            t2.removeUnit(m1);
-            System.out.println("Event : Une unité est décédée");
+            playableTeam.removeUnit(m1);
+            aiTeam.removeUnit(m1);
+            System.out.println("Event: A unit died");
         }
         if (!m2.getCore().alive()) {
-            t1.removeUnit(m2);
-            t2.removeUnit(m2);
-            System.out.println("Event : Une unité est décédée");
+            playableTeam.removeUnit(m2);
+            aiTeam.removeUnit(m2);
+            System.out.println("Event: A unit died");
         }
 
-        if (!(t1.alive() && t2.alive())) {
-            System.out.println("The end ... " + (t1.alive() ? t1.getName() : t2.getName()) + " won.");
+        if (!(playableTeam.alive() && aiTeam.alive())) {
+            if (playableTeam.alive()) {
+                System.out.println("Game Over. You win!");
+            } else {
+                System.out.println("Game Over. You lose!");
+                life.setValue(0);
+            }
             endOfGame.setValue(true);
         }
     }

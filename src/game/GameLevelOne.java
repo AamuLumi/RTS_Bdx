@@ -80,8 +80,8 @@ public class GameLevelOne extends GameLevelDefaultImpl {
         UnitFactory factoryTeam2 = new AIUnitFactory((GameUniverseRTS) universe, age);
         factoryTeam2.setupCanvas(canvas);
 
-        Team t1 = new Team("Team 1", factoryTeam1);
-        Team t2 = new Team("Team 2", factoryTeam2);
+        Team t1 = new Team("Playable team (Red Team)", factoryTeam1);
+        Team t2 = new Team("Ai team (Yellow Team)", factoryTeam2);
 
         overlapRules.setTeams(t1, t2);
 

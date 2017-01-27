@@ -9,7 +9,6 @@ import game.entity.Garage;
 import game.entity.Soldier;
 import game.entity.Vehicle;
 import gameframework.core.GameMovableDriverDefaultImpl;
-import gameframework.core.GameUniverse;
 import soldier.core.AgeAbstractFactory;
 
 public class PlayableUnitFactory implements UnitFactory {

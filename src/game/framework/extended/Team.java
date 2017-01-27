@@ -1,7 +1,6 @@
 package game.framework.extended;
 
 import game.entity.MilitaryUnit;
-import gameframework.core.GameEntity;
 import soldier.core.UnitGroup;
 
 public class Team extends UnitGroup {

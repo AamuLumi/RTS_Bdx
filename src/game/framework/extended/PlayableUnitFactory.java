@@ -47,7 +47,6 @@ public class PlayableUnitFactory implements UnitFactory {
         MoveStrategyMouse mouseStr = new MoveStrategyMouse(currentSoldier);
 
         soldierDriver.setStrategy(mouseStr);
-        soldierDriver.setmoveBlockerChecker(gameUniverse.getMoveBlockerChecker());
         canvas.addMouseListener(mouseStr);
 
         currentSoldier.setDriver(soldierDriver);
@@ -67,7 +66,6 @@ public class PlayableUnitFactory implements UnitFactory {
         MoveStrategyMouse mouseStr = new MoveStrategyMouse(currentVehicle);
 
         vehicleDriver.setStrategy(mouseStr);
-        vehicleDriver.setmoveBlockerChecker(gameUniverse.getMoveBlockerChecker());
         canvas.addMouseListener(mouseStr);
 
         currentVehicle.setDriver(vehicleDriver);

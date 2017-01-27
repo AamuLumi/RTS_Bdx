@@ -2,8 +2,6 @@ package game.entity;
 
 import gameframework.core.Drawable;
 import gameframework.core.DrawableImage;
-import gameframework.core.GameEntity;
-import gameframework.moves_rules.MoveBlocker;
 
 import java.awt.Canvas;
 import java.awt.Graphics;

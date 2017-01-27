@@ -6,8 +6,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import game.entity.Building;
-import gameframework.core.GameMovable;
-import gameframework.core.Movable;
 import gameframework.moves_rules.MoveStrategy;
 import gameframework.moves_rules.SpeedVector;
 import gameframework.moves_rules.SpeedVectorDefaultImpl;

@@ -6,8 +6,10 @@ import game.entity.Garage;
 import game.entity.Soldier;
 import game.entity.Vehicle;
 import game.rule.AIMovableDriver;
+import game.rule.MoveStrategyRandomRTS;
 import gameframework.core.GameMovableDriverDefaultImpl;
 import gameframework.moves_rules.MoveStrategyRandom;
+import gameframework.moves_rules.MoveStrategyStraightLine;
 import soldier.core.AgeAbstractFactory;
 
 import java.awt.*;
@@ -46,8 +48,9 @@ public class AIUnitFactory implements UnitFactory {
         team.addUnit(currentSoldier.getCore());
 
         GameMovableDriverDefaultImpl aiDriver = new AIMovableDriver();
+        MoveStrategyRandomRTS patrolStrategy = new MoveStrategyRandomRTS(2);
         MoveStrategyRandom ranStr = new MoveStrategyRandom();
-        aiDriver.setStrategy(ranStr);
+        aiDriver.setStrategy(patrolStrategy);
         aiDriver.setmoveBlockerChecker(gameUniverse.getMoveBlockerChecker());
         currentSoldier.setDriver(aiDriver);
 
@@ -63,8 +66,8 @@ public class AIUnitFactory implements UnitFactory {
         team.addUnit(currentVehicle.getCore());
 
         GameMovableDriverDefaultImpl aiDriver = new AIMovableDriver();
-        MoveStrategyRandom ranStr = new MoveStrategyRandom();
-        aiDriver.setStrategy(ranStr);
+        MoveStrategyRandomRTS patrolStrategy = new MoveStrategyRandomRTS(4);
+        aiDriver.setStrategy(patrolStrategy);
         aiDriver.setmoveBlockerChecker(gameUniverse.getMoveBlockerChecker());
         currentVehicle.setDriver(aiDriver);
 
